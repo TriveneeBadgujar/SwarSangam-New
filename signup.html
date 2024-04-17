@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-image: url('signup_page.jpg');
+            /* Replace 'background-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            /* Align items to the right */
+            list-style-type: none;
+            height: 65px;
+            background-color: black;
+            color: white;
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        nav ul li {
+            margin-left: 10px;
+            /* Add some space between navigation items */
+        }
+
+        nav ul li a {
+            padding: 0 12px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            /* Change to your desired hover color */
+        }
+
+        .brand img {
+            width: 44px;
+            padding: 0 8px;
+        }
+
+        .brand {
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+
+
+        .signup-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Add background color with opacity for better readability */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="RetroTune">स्वरसंगम</li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="BS.html">Best Singer</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <input type="text" id="fullname" placeholder="Full Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            var fullname = document.getElementById('fullname').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Dummy validation - You should perform more thorough validation on the server side
+            if (fullname.trim() === '') {
+                alert('Please enter your full name.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (password.trim() === '') {
+                alert('Please enter a password.');
+                return;
+            }
+
+            // Dummy sign-up logic - Replace with actual sign-up logic
+            alert('Sign up successful!');
+
+            // Redirect to login page
+            window.location.href = 'login.html';
+        });
+
+        // Function to validate email
+        function validateEmail(email) {
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+
+    </script>
+</body>
+
+</html>

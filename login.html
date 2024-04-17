@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* login.css */
+        body {
+            background-image: url('login_page.jpg');
+            /* Replace 'background-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            /* Align items to the right */
+            list-style-type: none;
+            height: 65px;
+            background-color: black;
+            color: white;
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        nav ul li {
+            margin-left: 10px;
+            /* Add some space between navigation items */
+        }
+
+        nav ul li a {
+            padding: 0 12px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            /* Change to your desired hover color */
+        }
+
+        .brand img {
+            width: 44px;
+            padding: 0 8px;
+        }
+
+        .brand {
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+
+
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="RetroTune">स्वरसंगम</li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="BS.html">Best Singer</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Gmail or Mobile Number">
+            <input type="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p> <!-- Link to Sign Up page -->
+    </div>
+
+    <script>
+        // login.js
+
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Dummy validation for Gmail or mobile number format
+            if (validateGmail(username) || validateMobileNumber(username)) {
+                // Dummy authentication - Replace with actual authentication logic
+                if (password === 'password') { // Assuming password is always "password" for this example
+                    alert('Login successful!');
+                    // Redirect to another page or perform other actions
+                } else {
+                    alert('Incorrect password. Please try again.');
+                }
+            } else {
+                alert('Invalid Gmail or Mobile Number. Please enter a valid Gmail address or mobile number.');
+            }
+        });
+
+        // Function to validate Gmail address
+        function validateGmail(email) {
+            var gmailRegex = /^\w+([\.-]?\w+)*@gmail.com$/;
+            return gmailRegex.test(email);
+        }
+
+        // Function to validate Mobile number
+        function validateMobileNumber(number) {
+            var mobileRegex = /^[6-9]\d{9}$/; // Assuming Indian mobile numbers starting with 6, 7, 8, or 9 and 10 digits long
+            return mobileRegex.test(number);
+        }
+
+
+    </script>
+</body>
+
+</html>

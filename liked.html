@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्वरसंगम</title>
+    <style>
+        /* Basic styling for the Liked page */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+
+        body {
+            background-color: rgb(247, 202, 143);
+            background: linear-gradient(135deg, #3494e6, #ec6ead);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            /* Align items to the right */
+            list-style-type: none;
+            height: 65px;
+            background-color: black;
+            color: white;
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        nav ul li {
+            margin-left: 10px;
+            /* Add some space between navigation items */
+        }
+
+        nav ul li a {
+            padding: 0 12px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            /* Change to your desired hover color */
+        }
+
+        .brand img {
+            width: 44px;
+            padding: 0 8px;
+        }
+
+        .brand {
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+
+        .title-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            margin-right: 10px;
+        }
+
+        /* You can adjust the styling according to your preference */
+
+
+        .container {
+            min-height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: 'Varela Round', sans-serif;
+            display: flex;
+            width: 70%;
+            margin: 23px auto;
+            border-radius: 12px;
+            padding: 34px;
+            background-image: url('bg.png');
+        }
+
+        .bottom {
+            position: sticky;
+            height: 130px;
+            background-color: black;
+            color: white;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .icons {
+            margin-top: 14px;
+        }
+
+        .icons i {
+            cursor: pointer;
+        }
+
+        #myProgressBar {
+            width: 80vw;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .songItem {
+            display: flex;
+            align-items: center;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: 40px;
+            /* Adjust the height as needed */
+            margin-bottom: 10px;
+            /* Adjust the margin as needed */
+            padding: 10px;
+            background-color: white;
+            border: 1px solid rgba(190, 10, 235, 0.772);
+            border-radius: 5px;
+            color: black;
+        }
+
+        .songItem img {
+            width: 50px;
+            /* Adjust the width of the image as needed */
+            height: 50px;
+            /* Adjust the height of the image as needed */
+            margin-right: 10px;
+            border: 1px solid rgba(190, 10, 235, 0.772);
+        }
+
+        .songName {
+            flex: 1;
+            color: black;
+        }
+
+        .songlistPlay {
+            margin-left: auto;
+        }
+
+        /* You can adjust the styling according to your preference */
+
+        .songItemContainer {
+            margin-top: 50px;
+        }
+
+        /* .songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 80%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+.songItem img{
+    width: 43px;
+    margin: 0 23px;   
+    border-radius: 34px;
+} */
+        .timestamp {
+            margin: 0 23px;
+        }
+
+        .timestamp i {
+            cursor: pointer;
+        }
+
+        .songInfo {
+            position: absolute;
+            left: 10vw;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .songInfo img {
+            opacity: 0;
+            transition: opacity 1ms ease-in;
+        }
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .liked-song {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .liked-song img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .liked-song .song-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .liked-song .song-details .song-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="RetroTune">स्वरसंगम</li>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <!-- <button id="searchButton">Search</button> -->
+            <li><a href="../../liked.html">Liked</a></li>
+            <li><a href="../../home.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+        </ul>
+    </nav>
+    <h1>Liked Songs</h1>
+
+    <div class="liked-songs-container">
+        <!-- Liked songs will be dynamically added here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const likedSongsContainer = document.querySelector('.liked-songs-container');
+
+            // Retrieve liked songs from local storage
+            const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+
+            // Render liked songs
+            renderLikedSongs(likedSongs);
+
+            function renderLikedSongs(songs) {
+                // Clear existing content
+                likedSongsContainer.innerHTML = '';
+
+                if (songs.length === 0) {
+                    likedSongsContainer.innerHTML = '<p>No liked songs found.</p>';
+                    return;
+                }
+
+                // Loop through each liked song and create HTML elements to display them
+                songs.forEach(song => {
+                    const songElement = document.createElement('div');
+                    songElement.classList.add('liked-song');
+                    songElement.innerHTML = `
+                <div class="song-details">
+                    <img src="${song.coverPath}" alt="${song.songName}">
+                    <span class="song-name">${song.songName}</span>
+                </div>
+            `;
+                    likedSongsContainer.appendChild(songElement);
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

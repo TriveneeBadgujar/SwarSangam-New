@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्वरसंगम</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="RetroTune">स्वरसंगम</li>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton">Search</button>
+            <li><a href="../../home.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Best of SwarSangam - Philosophical Songs </h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Zindagi Kaisi Hai Paheli</span>
+                    <span class="songlistPlay"><span class="timestamp">03:50<i id="0"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Kisi Ki Muskurahaton Pe Ho Nisar </span>
+                    <span class="songlistPlay"><span class="timestamp">04:09<i id="1"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Ae Bhai Zara Dekh Ke Chalo </span>
+                    <span class="songlistPlay"><span class="timestamp">06:42<i id="2"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Musafir Hoon Yaaron </span>
+                    <span class="songlistPlay"><span class="timestamp">07:57<i id="3"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Main Zindagi Ka Saath Nibhaata Chala Gaya </span>
+                    <span class="songlistPlay"><span class="timestamp">03:48<i id="4"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Khoya Khoya Chand Khula Aasman  </span>
+                    <span class="songlistPlay"><span class="timestamp">04:54<i id="5"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Woh Subah Kabhi Toh Aayegi  </span>
+                    <span class="songlistPlay"><span class="timestamp">03:57<i id="6"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Allah Tero Naam, Ishwar Tero Naam </span>
+                    <span class="songlistPlay"><span class="timestamp">03:27<i id="7"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"><span id="masterSongName">Gulon Mein Rang Bhare</span>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्वरसंगम</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="RetroTune">स्वरसंगम</li>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton">Search</button>
+            <li><a href="../../home.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Best of SwarSangam - Evergreen Playful Songs </h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Eena Meena Deeka</span>
+                    <span class="songlistPlay"><span class="timestamp">03:55<i id="0"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Sar Jo Tera Chakraye </span>
+                    <span class="songlistPlay"><span class="timestamp">04:34<i id="1"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Bholi Surat Dil Ke Khote </span>
+                    <span class="songlistPlay"><span class="timestamp">04:54<i id="2"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Yahoo! Chahe Koi Mujhe Junglee Kahe </span>
+                    <span class="songlistPlay"><span class="timestamp">04:43<i id="3"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Aaj Kal Tere Mere Pyar Ke Charche </span>
+                    <span class="songlistPlay"><span class="timestamp">04:58<i id="4"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Main Hoon Jhum Jhum Jhumroo </span>
+                    <span class="songlistPlay"><span class="timestamp">03:14<i id="5"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Humma Humma </span>
+                    <span class="songlistPlay"><span class="timestamp">05:11<i id="6"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Sona Kitna Sona Hai </span>
+                    <span class="songlistPlay"><span class="timestamp">04:57<i id="7"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Mera Naam Chin Chin Chu </span>
+                    <span class="songlistPlay"><span class="timestamp">04:30<i id="8"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Main Hoon Ghoda Yeh Hai Gaadi </span>
+                    <span class="songlistPlay"><span class="timestamp">06:17<i id="9"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Aao Twist Karein </span>
+                    <span class="songlistPlay"><span class="timestamp">06:07<i id="10"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Golmaal Hai Bhai Sab Golmaal Hai </span>
+                    <span class="songlistPlay"><span class="timestamp">04:27<i id="11"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="cover1.png" alt="1">
+                    <span class="songName">Mere Sapno Ki Rani </span>
+                    <span class="songlistPlay"><span class="timestamp">04:23<i id="12"
+                                class="far songItemPlay fa-play-circle"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"><span id="masterSongName">Gulon Mein Rang Bhare</span>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
